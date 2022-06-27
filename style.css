@@ -53,7 +53,7 @@ body{
      width: 100%;
      top: 60px;
      display: flex;
-     background: url(img/M-B.jpg);
+     background: url(img/Background.jpg);
      background-size: cover;
      background-repeat: no-repeat;
      justify-content: center;
@@ -61,17 +61,17 @@ body{
      overflow: hidden;
      height: 100%;
 }
-.main img{
+.main .contain img{
      width: 120px;
      border-radius: 50%;
-     position: relative;
-     box-shadow: 5px 5px 5px rgb(218, 58, 58);
-     left: 500px;
-     bottom: 60px;
+     position: absolute;
+     /* box-shadow: 5px 5px 5px; */
+     right: 10%;
+     bottom: 300px;
      cursor: pointer;
      transition: 2s;
 }
-.main img:hover{
+.main .contain img:hover{
      animation: rotate 4s;
 }
 @keyframes rotate {
@@ -92,26 +92,27 @@ body{
      }
 }
 
-.main h4{
+.main .contain h4{
      font-size: 2.7em;
      font-weight: 700;
      font-family: var(--f);
-     color: rgb(218, 58, 58);
+     color: #ff0344;
      position: absolute;
      left: 5%;
 }
+/* Nooo*/
 
-.main p{
+.main .contain p{
      font-size: 1.4em;
      color: #fff;
      position: absolute;
      top: 450px;
      left: 10%;
 }
-.main a{
+.main .contain a{
      font-size: 1.1em;
      color: #000;
-     background: rgb(222, 55, 55);
+     background: #ff0344;
      position: absolute;
      top: 550px;
      left: 30%;
@@ -127,11 +128,11 @@ body{
      transition: 1s;
      opacity: 1;
 }
-.main a:hover{
+.main .contain a:hover{
      width: 200px;
 }
-.main a span{
-     color: rgb(222, 55, 55);
+.main .contain a span{
+     color: #ff0344;
 }
 
 .sc{
@@ -264,39 +265,7 @@ body{
      transition-delay: 0.5s;
 }
 
-/* Now responsive */
-@media (max-width: 991px){
-     .card{
-          width: auto;
-          max-width: 350px;
-          align-items: flex-start;
-     }
-     .card:hover{
-          height: 600px;
-     }
-     .card:hover .lg{
-          top: initial;
-          bottom: 30px;
-          left: 50%;
-          transform: translate(-50%, 0%) scale(1);
-          height: 150px;
-     }
-     .card .content{
-          width: 100%;
-          left: 0;
-          padding: 40px;
-          bottom: 30px;
-     }
-     .nav a{
-          font-size: 0.5em;
-     }
-     .head h3{
-          font-size: 1.1em;
-     }
-     .sv .conti, .srv .conti{
-          top: 180px;
-     }
-}
+
 
 .sv{
      background-color: #444;
@@ -640,5 +609,72 @@ footer p{
      }
      100%{
           background-position-x: 1000px;
+     }
+}
+/* Now responsive */
+@media (max-width: 991px){
+     .card{
+          width: auto;
+          max-width: 350px;
+          align-items: flex-start;
+     }
+     .card:hover{
+          height: 600px;
+     }
+     .card:hover .lg{
+          top: initial;
+          bottom: 30px;
+          left: 50%;
+          transform: translate(-50%, 0%) scale(1);
+          height: 150px;
+     }
+     .card .content{
+          width: 100%;
+          left: 0;
+          padding: 40px;
+          bottom: 30px;
+     }
+     .nav a{
+          font-size: 0.5em;
+          bottom: 15px;
+          position: relative;
+     }
+     .sc h4{
+          top: 5%;
+     }
+     .sv .conti, .srv .conti{
+          top: 180px;
+     }
+     #head{
+          height: 80px;
+     }
+     #head h3{
+          font-size: 1.1em;
+     }
+     .contain h4{
+          top: 150px;
+     }
+     .contain img{
+          left: 30%;
+          position: absolute;
+          top: 250px;
+     }
+     .sc{
+          min-height: calc(100vh + 700px);
+     }
+     .cardi{
+          bottom: 100px;
+     }
+     .conti .s{
+          bottom: 250px;
+     }
+     .slider{
+          width: 500px;
+          height: 400px;
+          position: relative;
+          bottom: 900px;
+     }
+     .slide img{
+          object-fit: cover;
      }
 }
